@@ -1,0 +1,274 @@
+:root {
+  --accent-color: hsla(27, 91%, 55%, 1);
+}
+
+body {
+  margin: 0;
+  background: hsla(360, 0%, 95%, 1);
+}
+
+navbar {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  padding: 3vh;
+  background: hsla(360, 0%, 0%, .1);
+  font-size: .5rem;
+}
+
+navbar > .navbar--right > ul {
+  list-style: none;
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+}
+
+navbar > .navbar--right > ul > li {
+  padding: 0 1vw;
+}
+
+.navbar--right > ul > li > a {
+  text-decoration: none;
+  color: black;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.navbar--right > ul > li > a:hover {
+  color: var(--accent-color);
+}
+
+a:hover::after {
+  content: "";
+  position: absolute;
+  right: 0%;
+  left: 0%;
+  top: -25px;
+  border: 5px solid var(--accent-color);
+}
+
+/* ### ### ### 09 */
+.b09_electric {
+    color: #000000;
+    background-color: #ffffff;
+    border: #000000 solid 1px;
+    padding: 10px;
+    transition: all 0.1s ease;
+    -webkit-transition: all 0.1s ease;
+    -moz-transition: all 0.1s ease;
+}
+
+.b09_electric:hover {
+    color: #ffffff;
+    background-color: #000000;
+    animation: b09_electric_blinkIn 0.1s step-end 0 2;
+    -webkit-animation: b09_electric_blinkIn 0.1s step-end 0 2;
+    -moz-animation: b09_electric_blinkIn 0.1s step-end 0 2;
+    transition: all 0.2s ease 0.2s;
+    -webkit-transition: all 0.2s ease 0.2s;
+    -moz-transition: all 0.2s ease 0.2s;
+}
+
+@-webkit-keyframes b09_electric_blinkIn {
+    from,
+    to {
+        background-color: #f8f8f8;
+        color: #080808;
+    }
+    50% {
+        background-color: #ffffff;
+        color: #000000;
+    }
+}
+
+@-moz-keyframes b09_electric_blinkIn {
+    from,
+    to {
+        background-color: #f8f8f8;
+        color: #080808;
+    }
+    50% {
+        background-color: #ffffff;
+        color: #000000;
+    }
+}
+
+.button--group {
+  display: inline-flex;
+  margin-left: 10px
+}
+
+.button--group button {
+   background-color: #4CAF50; /* Green background */
+  border: 1px solid green; /* Green border */
+  color: white; /* White text */
+  padding: 10px 24px; /* Some padding */
+  cursor: pointer; /* Pointer/hand icon */
+  float: left; /* Float the buttons side by side */ 
+}
+
+.button--group button:not(:last-child) {
+  border-right: none; /* Prevent double borders */
+}
+
+/* Clear floats (clearfix hack) */
+.button--group:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Add a background color on hover */
+.button--group button:hover {
+  background-color: #3e8e41;
+}
+
+
+
+
+/*****************/
+
+.hero__container {
+  position: relative;
+  width: 100%;
+  height: 55vh;
+  background-size: cover;
+  background-position: center;
+  background: grey;
+}
+
+
+.hero__main {
+  width: 75%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.hero__main-header h1 {
+  font-size: calc(2.4vw + 9px);
+  color: #FFF;
+  font-weight: 800;
+  text-shadow: 1px 1px 40px rgba(22, 23, 31, 0.6);
+  margin: 0 0 .3em 0;
+  text-align: center;
+}
+
+
+/*******************/
+
+.hero__footer {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.hero__footer > .wrapper {
+  width: 100px;
+  height: 100px;
+  background: hsla(360, 0%, 0%, .1);
+  margin: 0 5px;
+  border-radius: 100%;
+}
+
+.hero__footer > .slider__nav img {
+  width: 25px;
+  height: 25px;
+  cursor: pointer; 
+}
+
+.hero__footer > .slider__nav img:hover {
+  fill: darkgreen
+}
+
+.hero__footer > .slider__nav:last-child img {
+  transform: rotate(180deg);
+}
+
+
+
+/****************************/
+
+@font-face {
+  font-family: 'fontello';
+  src: url('../fonts/fontello-3c11039e/font/fontello.eot');
+  src: url('../fonts/fontello-3c11039e/font/fontello.eot#iefix') format('embedded-opentype'),
+       url('../fonts/fontello-3c11039e/font/fontello.woff') format('woff'),
+       url('../fonts/fontello-3c11039e/font/fontello.ttf') format('truetype'),
+       url('../fonts/fontello-3c11039e/font/fontello.svg#fontello') format('svg');
+
+  font-weight: normal;
+  font-style: normal;
+}
+
+.demo-icon
+{
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+ 
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+ 
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+ 
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+ 
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+ 
+  /* You can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+ 
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+ 
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+
+.the-icons {
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.job__wrapper {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.insight__wrapper {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.dummy {
+  width: 100px;
+  height: 100px;
+  background: tomato;
+}
+
+footer {
+  display: flex;
+  background: rgb(150, 138, 138);
+  padding: 30px;
+}
+
+.footer__left {
+  width: 30%;
+}
+
